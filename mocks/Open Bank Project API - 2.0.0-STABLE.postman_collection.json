@@ -43,7 +43,7 @@
 					},
 					"response": [
 						{
-							"id": "985fad5c-72b2-4cff-b3ad-79fe2afd17b1",
+							"id": "84078cc3-98b2-41f4-8627-1b9ea0aa2892",
 							"name": "Get Account 8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0",
 							"originalRequest": {
 								"method": "GET",
@@ -81,7 +81,7 @@
 							"body": "{\n  \"id\":\"8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0\",\n  \"label\":\"NoneLabel\",\n  \"number\":\"123\",\n  \"owners\":[{\n    \"id\":\"5995d6a2-01b3-423c-a173-5481df49bdaf\",\n    \"provider\":\"OBP\",\n    \"display_name\":\"OBP\"\n  }],\n  \"type\":\"OBP\",\n  \"balance\":{\n    \"currency\":\"EUR\",\n    \"amount\":\"10\"\n  },\n  \"IBAN\":\"GR1301720530005053000582373\",\n  \"swift_bic\":\"UKTF3049auf\",\n  \"bank_id\":\"gh.29.uk\",\n  \"account_routing\":{\n    \"scheme\":\"AccountNumber\",\n    \"address\":\"4930396\"\n  }\n}"
 						},
 						{
-							"id": "e0a30c82-e1f1-4339-904b-8e35d2a8105e",
+							"id": "59cbba96-78a3-4be0-b46f-fb5debcd3feb",
 							"name": "Get Account account-id-123",
 							"originalRequest": {
 								"method": "GET",
@@ -144,7 +144,7 @@
 					},
 					"response": [
 						{
-							"id": "44782277-b7d3-411d-b724-1a6ce9229313",
+							"id": "2df4032a-4d7f-48b0-ab06-24c7e25be8c0",
 							"name": "Get Accounts at Bank gh.29.uk",
 							"originalRequest": {
 								"method": "GET",
@@ -203,7 +203,7 @@
 					},
 					"response": [
 						{
-							"id": "72112205-a49b-4430-83b6-10463afb0615",
+							"id": "8e7d8702-4aa5-4b81-bd04-40778c786387",
 							"name": "Update Account 123 at gh.29.ukLabel",
 							"originalRequest": {
 								"method": "POST",
@@ -283,7 +283,7 @@
 					},
 					"response": [
 						{
-							"id": "753bce7a-9821-4a54-ad57-f5148b78111c",
+							"id": "c54b6a70-f5d4-4784-9524-658e4eb024b1",
 							"name": "Get access to Account 8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0",
 							"originalRequest": {
 								"method": "GET",
@@ -349,7 +349,7 @@
 					},
 					"response": [
 						{
-							"id": "836e8784-36a7-48b8-82bc-315059e0eb0d",
+							"id": "72011262-2d6a-416b-8ccc-076090869c26",
 							"name": "Get Views for Account 8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0",
 							"originalRequest": {
 								"method": "GET",
@@ -417,7 +417,7 @@
 					},
 					"response": [
 						{
-							"id": "317b648b-9041-4afb-a916-82d33686221e",
+							"id": "63fd2d37-456f-4b22-8482-f1e33bfe5029",
 							"name": "Get gh.29.uk Bank",
 							"originalRequest": {
 								"method": "GET",
@@ -448,7 +448,7 @@
 							"body": "{\n  \"id\":\"gh.29.uk\",\n  \"short_name\":\"short_name \",\n  \"full_name\":\"full_name\",\n  \"logo\":\"logo\",\n  \"website\":\"www.openbankproject.com\",\n  \"bank_routing\":{\n    \"scheme\":\"Bank_ID\",\n    \"address\":\"gh.29.uk\"\n  }\n}"
 						},
 						{
-							"id": "dcad27ef-ae3e-4c8e-b015-dde74e367956",
+							"id": "f2392735-179d-4fdb-8617-ee57f045e5d3",
 							"name": "Get Postbank Bank",
 							"originalRequest": {
 								"method": "GET",
@@ -479,7 +479,7 @@
 							"body": "{\n\t\"id\": \"postbank\",\n    \"short_name\": \"Postbank\",\n    \"full_name\": \"Deutsche Postbank AG (DE)\",\n    \"logo\": \"url of internet standard image\",\n    \"website\": \"www.postbank.de\"\n}"
 						},
 						{
-							"id": "a415117d-7e71-4346-8c1a-8470861f12e8",
+							"id": "38dc7747-4dfe-4873-aba1-623eabc616b7",
 							"name": "Get bank-id-123 Bank",
 							"originalRequest": {
 								"method": "GET",
@@ -552,7 +552,7 @@
 					},
 					"response": [
 						{
-							"id": "48ffb524-357b-4b3e-ac7b-881f1cfd09b6",
+							"id": "61897242-0084-47ff-b5c8-d01d84447f3d",
 							"name": "Get bank-id-123 ATM",
 							"originalRequest": {
 								"method": "GET",
@@ -609,7 +609,7 @@
 					},
 					"response": [
 						{
-							"id": "1210cf7f-cb13-4568-b2f7-358d8f0d97a1",
+							"id": "7320fd37-bbb0-4f6e-8fdb-92e1ea8f37a3",
 							"name": "Get Bank Products",
 							"originalRequest": {
 								"method": "GET",
@@ -653,7 +653,7 @@
 					},
 					"response": [
 						{
-							"id": "55df51ff-afc0-4ff7-bedb-ed1038c30724",
+							"id": "c37ea40d-929d-41f3-a336-a6223ec2138f",
 							"name": "Get Banks",
 							"originalRequest": {
 								"method": "GET",
@@ -683,9 +683,9 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "/bancks/:BANK_ID/transaction-types",
+							"raw": "/banks/:BANK_ID/transaction-types",
 							"path": [
-								"bancks",
+								"banks",
 								":BANK_ID",
 								"transaction-types"
 							],
@@ -700,7 +700,7 @@
 					},
 					"response": [
 						{
-							"id": "ababb6dd-530e-4ccc-8c67-5681dd0a9723",
+							"id": "7f80b931-d79c-4a0f-8b62-0386c60bf606",
 							"name": "Get Transaction Types at bank-id-123 Bank",
 							"originalRequest": {
 								"method": "GET",
@@ -710,16 +710,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "/bancks/:BANK_ID/transaction-types",
+									"raw": "/banks/:BANK_ID/transaction-types",
 									"path": [
-										"bancks",
+										"banks",
 										":BANK_ID",
 										"transaction-types"
 									],
 									"variable": [
 										{
 											"key": "BANK_ID",
-											"value": ""
+											"value": "bank-id-123"
 										}
 									]
 								}
@@ -729,7 +729,7 @@
 							"_postman_previewlanguage": "json",
 							"header": [],
 							"cookie": [],
-							"body": "{\n    \"transaction_types\": [\n        {\n            \"id\": {\n                \"value\": \"123\"\n            },\n            \"bank_id\": \"bank-id-123\",\n            \"short_code\": \"ty-type-code\",\n            \"summary\": \"Transaction type summary\",\n            \"description\": \"Transaction type description\",\n            \"charge\": {\n                \"currency\": \"EUR\",\n                \"amount\": \"10\"\n            }\n        }\n    ]\n}"
+							"body": "{\n    \"transaction_types\": [\n        {\n            \"id\": {\n                \"value\": \"123\"\n            },\n            \"bank_id\": \"bank-id-123\",\n            \"short_code\": \"tx-type-code\",\n            \"summary\": \"Transaction type summary\",\n            \"description\": \"Transaction type description\",\n            \"charge\": {\n                \"currency\": \"EUR\",\n                \"amount\": \"10\"\n            }\n        }\n    ]\n}"
 						}
 					]
 				}
@@ -750,7 +750,7 @@
 					},
 					"response": [
 						{
-							"id": "1cbe8511-31fc-424b-ac75-708d4237a7aa",
+							"id": "813401a2-1fc4-4b26-9609-2a1f278bddaa",
 							"name": "Get cards for current user",
 							"originalRequest": {
 								"method": "GET",
@@ -803,7 +803,7 @@
 					},
 					"response": [
 						{
-							"id": "af8b307c-86e2-4785-91bb-543f4d465f88",
+							"id": "eab3b733-af8e-4468-b301-6fa4fc5c3924",
 							"name": "Get Transactions for Account 5995d6a2-01b3-423c-a173-5481df49bdaf",
 							"originalRequest": {
 								"method": "GET",
@@ -883,7 +883,7 @@
 					},
 					"response": [
 						{
-							"id": "147ffea3-6f7e-48fd-abfb-480cdc5146ec",
+							"id": "dbf1c657-c248-4eb2-8139-b882e62e8b70",
 							"name": "Add a tag for Tx 123 on Account 5995d6a2-01b3-423c-a173-5481df49bdaf",
 							"originalRequest": {
 								"method": "POST",
@@ -974,7 +974,7 @@
 					},
 					"response": [
 						{
-							"id": "3379fca3-2ca8-4910-a6c2-4933bd3cd31f",
+							"id": "a9783799-d8d6-47ec-9c33-bd0212babb4a",
 							"name": "Get tags",
 							"originalRequest": {
 								"method": "GET",
