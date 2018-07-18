@@ -1,0 +1,1046 @@
+{
+	"info": {
+		"name": "Open Bank Project",
+		"_postman_id": "e9cbea5f-d929-480b-8e07-eb68940897be",
+		"description": "version=2.0.0-STABLE - OBP API as decribed on https://github.com/OpenBankProject/OBP-API/wiki/REST-API-V1.2.1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"description": null,
+			"item": [
+				{
+					"name": "Get Account by Id (Core)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID/account",
+							"path": [
+								"banks",
+								":BANK_ID",
+								"accounts",
+								":ACCOUNT_ID",
+								"account"
+							],
+							"variable": [
+								{
+									"key": "BANK_ID",
+									"value": ""
+								},
+								{
+									"key": "ACCOUNT_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "985fad5c-72b2-4cff-b3ad-79fe2afd17b1",
+							"name": "Get Account 8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID/account",
+									"path": [
+										"banks",
+										":BANK_ID",
+										"accounts",
+										":ACCOUNT_ID",
+										"account"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "gh.29.uk"
+										},
+										{
+											"key": "ACCOUNT_ID",
+											"value": "8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"id\":\"8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0\",\n  \"label\":\"NoneLabel\",\n  \"number\":\"123\",\n  \"owners\":[{\n    \"id\":\"5995d6a2-01b3-423c-a173-5481df49bdaf\",\n    \"provider\":\"OBP\",\n    \"display_name\":\"OBP\"\n  }],\n  \"type\":\"OBP\",\n  \"balance\":{\n    \"currency\":\"EUR\",\n    \"amount\":\"10\"\n  },\n  \"IBAN\":\"GR1301720530005053000582373\",\n  \"swift_bic\":\"UKTF3049auf\",\n  \"bank_id\":\"gh.29.uk\",\n  \"account_routing\":{\n    \"scheme\":\"AccountNumber\",\n    \"address\":\"4930396\"\n  }\n}"
+						},
+						{
+							"id": "e0a30c82-e1f1-4339-904b-8e35d2a8105e",
+							"name": "Get Account account-id-123",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID/account",
+									"path": [
+										"banks",
+										":BANK_ID",
+										"accounts",
+										":ACCOUNT_ID",
+										"account"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "bank-id-123"
+										},
+										{
+											"key": "ACCOUNT_ID",
+											"value": "account-id-123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"id\": \"account-id-123\",\n    \"bank_id\": \"banck-id-123\",\n    \"label\": \"Standard Account\",\n    \"number\": \"123\",\n    \"owners\": [\n        {\n            \"id\": \"5995d6a2-01b3-423c-a173-5481df49bdaf\",\n            \"provider\": \"OBP\",\n            \"display_name\": \"OBP\"\n        }\n    ],\n    \"type\": \"OBP\",\n    \"balance\": {\n        \"currency\": \"EUR\",\n        \"amount\": \"10\"\n    },\n    \"IBAN\": \"GR1301720530005053000582373\",\n    \"swift_bic\": \"UKTF3049auf\",\n    \"account_routing\": {\n        \"scheme\": \"AccountNumber\",\n        \"address\": \"4930396\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Accounts at Bank",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/banks/:BANK_ID/accounts",
+							"path": [
+								"banks",
+								":BANK_ID",
+								"accounts"
+							],
+							"variable": [
+								{
+									"key": "BANK_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "44782277-b7d3-411d-b724-1a6ce9229313",
+							"name": "Get Accounts at Bank gh.29.uk",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "/banks/:BANK_ID/accounts",
+									"path": [
+										"banks",
+										":BANK_ID",
+										"accounts"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "gh.29.uk"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"accounts\":[{\n    \"id\":\"8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0\",\n    \"label\":\"NoneLabel\",\n    \"bank_id\":\"gh.29.uk\",\n    \"views_available\":[{\n      \"id\":\"1\",\n      \"short_name\":\"HHH\",\n      \"is_public\":true\n    }]\n  }]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Account Label",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID",
+							"path": [
+								"banks",
+								":BANK_ID",
+								"accounts",
+								":ACCOUNT_ID"
+							],
+							"variable": [
+								{
+									"key": "BANK_ID",
+									"value": ""
+								},
+								{
+									"key": "ACCOUNT_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "72112205-a49b-4430-83b6-10463afb0615",
+							"name": "Update Account 123 at gh.29.ukLabel",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n\t\"id\":\"8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0\",  \n\t\"label\":\"My Savings Account\",  \n\t\"bank_id\":\"gh.29.uk\"\n}"
+								},
+								"url": {
+									"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID",
+									"path": [
+										"banks",
+										":BANK_ID",
+										"accounts",
+										":ACCOUNT_ID"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "gh.29.uk"
+										},
+										{
+											"key": "ACCOUNT_ID",
+											"value": "8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"success\":\"Success\"\n}\n"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Account View",
+			"description": "",
+			"item": [
+				{
+					"name": "Get access",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID/permissions",
+							"path": [
+								"banks",
+								":BANK_ID",
+								"accounts",
+								":ACCOUNT_ID",
+								"permissions"
+							],
+							"variable": [
+								{
+									"key": "BANK_ID",
+									"value": ""
+								},
+								{
+									"key": "ACCOUNT_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "753bce7a-9821-4a54-ad57-f5148b78111c",
+							"name": "Get access to Account 8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID/permissions",
+									"path": [
+										"banks",
+										":BANK_ID",
+										"accounts",
+										":ACCOUNT_ID",
+										"permissions"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "gh.29.uk"
+										},
+										{
+											"key": "ACCOUNT_ID",
+											"value": "8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"permissions\":[{\n    \"user\":{\n      \"id\":\"5995d6a2-01b3-423c-a173-5481df49bdaf\",\n      \"provider\":\"OBP\",\n      \"display_name\":\"OBP\"\n    },\n    \"views\":[{\n      \"id\":\"123\",\n      \"short_name\":\"short_name\",\n      \"description\":\"description\",\n      \"is_public\":true,\n      \"alias\":\"None\",\n      \"hide_metadata_if_alias_used\":true,\n      \"can_add_comment\":true,\n      \"can_add_corporate_location\":true,\n      \"can_add_image\":true,\n      \"can_add_image_url\":true,\n      \"can_add_more_info\":true,\n      \"can_add_open_corporates_url\":true,\n      \"can_add_physical_location\":true,\n      \"can_add_private_alias\":true,\n      \"can_add_public_alias\":true,\n      \"can_add_tag\":true,\n      \"can_add_url\":true,\n      \"can_add_where_tag\":true,\n      \"can_delete_comment\":true,\n      \"can_delete_corporate_location\":true,\n      \"can_delete_image\":true,\n      \"can_delete_physical_location\":true,\n      \"can_delete_tag\":true,\n      \"can_delete_where_tag\":true,\n      \"can_edit_owner_comment\":true,\n      \"can_see_bank_account_balance\":true,\n      \"can_see_bank_account_bank_name\":true,\n      \"can_see_bank_account_currency\":true,\n      \"can_see_bank_account_iban\":true,\n      \"can_see_bank_account_label\":true,\n      \"can_see_bank_account_national_identifier\":true,\n      \"can_see_bank_account_number\":true,\n      \"can_see_bank_account_owners\":true,\n      \"can_see_bank_account_swift_bic\":true,\n      \"can_see_bank_account_type\":true,\n      \"can_see_comments\":true,\n      \"can_see_corporate_location\":true,\n      \"can_see_image_url\":true,\n      \"can_see_images\":true,\n      \"can_see_more_info\":true,\n      \"can_see_open_corporates_url\":true,\n      \"can_see_other_account_bank_name\":true,\n      \"can_see_other_account_iban\":true,\n      \"can_see_other_account_kind\":true,\n      \"can_see_other_account_metadata\":true,\n      \"can_see_other_account_national_identifier\":true,\n      \"can_see_other_account_number\":true,\n      \"can_see_other_account_swift_bic\":true,\n      \"can_see_owner_comment\":true,\n      \"can_see_physical_location\":true,\n      \"can_see_private_alias\":true,\n      \"can_see_public_alias\":true,\n      \"can_see_tags\":true,\n      \"can_see_transaction_amount\":true,\n      \"can_see_transaction_balance\":true,\n      \"can_see_transaction_currency\":true,\n      \"can_see_transaction_description\":true,\n      \"can_see_transaction_finish_date\":true,\n      \"can_see_transaction_metadata\":true,\n      \"can_see_transaction_other_bank_account\":true,\n      \"can_see_transaction_start_date\":true,\n      \"can_see_transaction_this_bank_account\":true,\n      \"can_see_transaction_type\":true,\n      \"can_see_url\":true,\n      \"can_see_where_tag\":true\n    }]\n  }]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Views for Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID/views",
+							"path": [
+								"banks",
+								":BANK_ID",
+								"accounts",
+								":ACCOUNT_ID",
+								"views"
+							],
+							"variable": [
+								{
+									"key": "BANK_ID",
+									"value": ""
+								},
+								{
+									"key": "ACCOUNT_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "836e8784-36a7-48b8-82bc-315059e0eb0d",
+							"name": "Get Views for Account 8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID/views",
+									"path": [
+										"banks",
+										":BANK_ID",
+										"accounts",
+										":ACCOUNT_ID",
+										"views"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "gh.29.uk"
+										},
+										{
+											"key": "ACCOUNT_ID",
+											"value": "8ca8a7e4-6d02-48e3-a029-0b2bf89de9f0"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"views\":[{\n    \"id\":\"123\",\n    \"short_name\":\"short_name\",\n    \"description\":\"description\",\n    \"is_public\":true,\n    \"alias\":\"None\",\n    \"hide_metadata_if_alias_used\":true,\n    \"can_add_comment\":true,\n    \"can_add_corporate_location\":true,\n    \"can_add_image\":true,\n    \"can_add_image_url\":true,\n    \"can_add_more_info\":true,\n    \"can_add_open_corporates_url\":true,\n    \"can_add_physical_location\":true,\n    \"can_add_private_alias\":true,\n    \"can_add_public_alias\":true,\n    \"can_add_tag\":true,\n    \"can_add_url\":true,\n    \"can_add_where_tag\":true,\n    \"can_delete_comment\":true,\n    \"can_delete_corporate_location\":true,\n    \"can_delete_image\":true,\n    \"can_delete_physical_location\":true,\n    \"can_delete_tag\":true,\n    \"can_delete_where_tag\":true,\n    \"can_edit_owner_comment\":true,\n    \"can_see_bank_account_balance\":true,\n    \"can_see_bank_account_bank_name\":true,\n    \"can_see_bank_account_currency\":true,\n    \"can_see_bank_account_iban\":true,\n    \"can_see_bank_account_label\":true,\n    \"can_see_bank_account_national_identifier\":true,\n    \"can_see_bank_account_number\":true,\n    \"can_see_bank_account_owners\":true,\n    \"can_see_bank_account_swift_bic\":true,\n    \"can_see_bank_account_type\":true,\n    \"can_see_comments\":true,\n    \"can_see_corporate_location\":true,\n    \"can_see_image_url\":true,\n    \"can_see_images\":true,\n    \"can_see_more_info\":true,\n    \"can_see_open_corporates_url\":true,\n    \"can_see_other_account_bank_name\":true,\n    \"can_see_other_account_iban\":true,\n    \"can_see_other_account_kind\":true,\n    \"can_see_other_account_metadata\":true,\n    \"can_see_other_account_national_identifier\":true,\n    \"can_see_other_account_number\":true,\n    \"can_see_other_account_swift_bic\":true,\n    \"can_see_owner_comment\":true,\n    \"can_see_physical_location\":true,\n    \"can_see_private_alias\":true,\n    \"can_see_public_alias\":true,\n    \"can_see_tags\":true,\n    \"can_see_transaction_amount\":true,\n    \"can_see_transaction_balance\":true,\n    \"can_see_transaction_currency\":true,\n    \"can_see_transaction_description\":true,\n    \"can_see_transaction_finish_date\":true,\n    \"can_see_transaction_metadata\":true,\n    \"can_see_transaction_other_bank_account\":true,\n    \"can_see_transaction_start_date\":true,\n    \"can_see_transaction_this_bank_account\":true,\n    \"can_see_transaction_type\":true,\n    \"can_see_url\":true,\n    \"can_see_where_tag\":true\n  }]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bank",
+			"description": null,
+			"item": [
+				{
+					"name": "Get Bank",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "/banks/:BANK_ID",
+							"path": [
+								"banks",
+								":BANK_ID"
+							],
+							"variable": [
+								{
+									"key": "BANK_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "317b648b-9041-4afb-a916-82d33686221e",
+							"name": "Get gh.29.uk Bank",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "/banks/:BANK_ID",
+									"path": [
+										"banks",
+										":BANK_ID"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "gh.29.uk"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"id\":\"gh.29.uk\",\n  \"short_name\":\"short_name \",\n  \"full_name\":\"full_name\",\n  \"logo\":\"logo\",\n  \"website\":\"www.openbankproject.com\",\n  \"bank_routing\":{\n    \"scheme\":\"Bank_ID\",\n    \"address\":\"gh.29.uk\"\n  }\n}"
+						},
+						{
+							"id": "dcad27ef-ae3e-4c8e-b015-dde74e367956",
+							"name": "Get Postbank Bank",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "/banks/:BANK_ID",
+									"path": [
+										"banks",
+										":BANK_ID"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "postbank"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [],
+							"body": "{\n\t\"id\": \"postbank\",\n    \"short_name\": \"Postbank\",\n    \"full_name\": \"Deutsche Postbank AG (DE)\",\n    \"logo\": \"url of internet standard image\",\n    \"website\": \"www.postbank.de\"\n}"
+						},
+						{
+							"id": "a415117d-7e71-4346-8c1a-8470861f12e8",
+							"name": "Get bank-id-123 Bank",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "/banks/:BANK_ID",
+									"path": [
+										"banks",
+										":BANK_ID"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "bank-id-123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bank-id-123\",\n    \"short_name\": \"short_name \",\n    \"full_name\": \"full_name\",\n    \"logo\": \"logo\",\n    \"website\": \"www.openbankproject.com\",\n    \"bank_routing\": {\n        \"scheme\": \"Bank_ID\",\n        \"address\": \"bank-id-123\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Bank ATMS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "/banks/:BANK_ID/atms?limit=100&offset=0",
+							"path": [
+								"banks",
+								":BANK_ID",
+								"atms"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "100",
+									"equals": true,
+									"description": "Pagination attribute"
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"equals": true,
+									"description": "Pagination attribute"
+								}
+							],
+							"variable": [
+								{
+									"key": "BANK_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "48ffb524-357b-4b3e-ac7b-881f1cfd09b6",
+							"name": "Get bank-id-123 ATM",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "/banks/:BANK_ID/atms",
+									"path": [
+										"banks",
+										":BANK_ID",
+										"atms"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "bank-id-123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n\t\"atms\":[{\n        \"id\": \"atm-id-123\",\n        \"bank_id\": \"bank-id-123\",\n        \"name\": \"Atm by the Lake\",\n        \"address\": {\n            \"line_1\": \"No 1 the Road\",\n            \"line_2\": \"The Place\",\n            \"line_3\": \"The Hill\",\n            \"city\": \"Berlin\",\n            \"county\": \"\",\n            \"state\": \"Brandenburg\",\n            \"postcode\": \"13359\",\n            \"country_code\": \"DE\"\n        },\n        \"location\": {\n            \"latitude\": 11.45,\n            \"longitude\": 11.45\n        },\n        \"meta\": {\n            \"license\": {\n                \"id\": \"5\",\n                \"name\": \"TESOBE\"\n            }\n        }\n    }]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Bank Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/banks/:BANK_ID/products",
+							"path": [
+								"banks",
+								":BANK_ID",
+								"products"
+							],
+							"variable": [
+								{
+									"key": "BANK_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "1210cf7f-cb13-4568-b2f7-358d8f0d97a1",
+							"name": "Get Bank Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "/banks/:BANK_ID/products",
+									"path": [
+										"banks",
+										":BANK_ID",
+										"products"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "bank-id-123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"products\":[{\n    \"code\":\"String\",\n    \"name\":\"String\",\n    \"category\":\"String\",\n    \"family\":\"String\",\n    \"super_family\":\"String\",\n    \"more_info_url\":\"String\",\n    \"meta\":{\n      \"license\":{\n        \"id\":\"5\",\n        \"name\":\"TESOBE\"\n      }\n    }\n  }]\n}\n"
+						}
+					]
+				},
+				{
+					"name": "Get Banks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "/banks",
+						"description": null
+					},
+					"response": [
+						{
+							"id": "55df51ff-afc0-4ff7-bedb-ed1038c30724",
+							"name": "Get Banks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "/banks"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"banks\": [\n    \t{\n            \"id\": \"hsbc\",\n            \"short_name\": \"HSBC\",\n            \"full_name\": \"The Hongkong and Shanghai Banking Corporation Limited\",\n            \"logo\": \"url of internet standard image\",\n            \"website\": \"www.postbank.de\"\n        },\n        {\n            \"id\": \"gh.29.uk\",\n            \"short_name\": \"short_name \",\n            \"full_name\": \"full_name\",\n            \"logo\": \"logo\",\n            \"website\": \"www.openbankproject.com\",\n            \"bank_routing\": {\n                \"scheme\": \"Bank_ID\",\n                \"address\": \"gh.29.uk\"\n            }\n        },\n        {\n            \"id\": \"bank-id-123\",\n            \"short_name\": \"short_name \",\n            \"full_name\": \"full_name\",\n            \"logo\": \"logo\",\n            \"website\": \"www.openbankproject.com\",\n            \"bank_routing\": {\n                \"scheme\": \"Bank_ID\",\n                \"address\": \"bank-id-123\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Transaction Types at Bank",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "/bancks/:BANK_ID/transaction-types",
+							"path": [
+								"bancks",
+								":BANK_ID",
+								"transaction-types"
+							],
+							"variable": [
+								{
+									"key": "BANK_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "ababb6dd-530e-4ccc-8c67-5681dd0a9723",
+							"name": "Get Transaction Types at bank-id-123 Bank",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "/bancks/:BANK_ID/transaction-types",
+									"path": [
+										"bancks",
+										":BANK_ID",
+										"transaction-types"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"transaction_types\": [\n        {\n            \"id\": {\n                \"value\": \"123\"\n            },\n            \"bank_id\": \"bank-id-123\",\n            \"short_code\": \"ty-type-code\",\n            \"summary\": \"Transaction type summary\",\n            \"description\": \"Transaction type description\",\n            \"charge\": {\n                \"currency\": \"EUR\",\n                \"amount\": \"10\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Card",
+			"description": "",
+			"item": [
+				{
+					"name": "Get cards for the current user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": "/cards",
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "1cbe8511-31fc-424b-ac75-708d4237a7aa",
+							"name": "Get cards for current user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": "/cards"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"cards\":[{\n    \"bank_id\":\"gh.29.uk\",\n    \"bank_card_number\":\"String\",\n    \"name_on_card\":\"String\",\n    \"issue_number\":\"String\",\n    \"serial_number\":\"String\",\n    \"valid_from_date\":\"2017-09-19T00:00:00Z\",\n    \"expires_date\":\"2017-09-19T00:00:00Z\",\n    \"enabled\":true,\n    \"cancelled\":true,\n    \"on_hot_list\":true,\n    \"technology\":\"String\",\n    \"networks\":[\"String\"],\n    \"allows\":[\"String\"],\n    \"account\":{\n      \"id\":\"123\",\n      \"label\":\"OBP\",\n      \"views_available\":[{\n        \"id\":\"123\",\n        \"short_name\":\"short_name\",\n        \"description\":\"description\",\n        \"is_public\":true,\n        \"alias\":\"None\",\n        \"hide_metadata_if_alias_used\":true,\n        \"can_add_comment\":true,\n        \"can_add_corporate_location\":true,\n        \"can_add_image\":true,\n        \"can_add_image_url\":true,\n        \"can_add_more_info\":true,\n        \"can_add_open_corporates_url\":true,\n        \"can_add_physical_location\":true,\n        \"can_add_private_alias\":true,\n        \"can_add_public_alias\":true,\n        \"can_add_tag\":true,\n        \"can_add_url\":true,\n        \"can_add_where_tag\":true,\n        \"can_delete_comment\":true,\n        \"can_delete_corporate_location\":true,\n        \"can_delete_image\":true,\n        \"can_delete_physical_location\":true,\n        \"can_delete_tag\":true,\n        \"can_delete_where_tag\":true,\n        \"can_edit_owner_comment\":true,\n        \"can_see_bank_account_balance\":true,\n        \"can_see_bank_account_bank_name\":true,\n        \"can_see_bank_account_currency\":true,\n        \"can_see_bank_account_iban\":true,\n        \"can_see_bank_account_label\":true,\n        \"can_see_bank_account_national_identifier\":true,\n        \"can_see_bank_account_number\":true,\n        \"can_see_bank_account_owners\":true,\n        \"can_see_bank_account_swift_bic\":true,\n        \"can_see_bank_account_type\":true,\n        \"can_see_comments\":true,\n        \"can_see_corporate_location\":true,\n        \"can_see_image_url\":true,\n        \"can_see_images\":true,\n        \"can_see_more_info\":true,\n        \"can_see_open_corporates_url\":true,\n        \"can_see_other_account_bank_name\":true,\n        \"can_see_other_account_iban\":true,\n        \"can_see_other_account_kind\":true,\n        \"can_see_other_account_metadata\":true,\n        \"can_see_other_account_national_identifier\":true,\n        \"can_see_other_account_number\":true,\n        \"can_see_other_account_swift_bic\":true,\n        \"can_see_owner_comment\":true,\n        \"can_see_physical_location\":true,\n        \"can_see_private_alias\":true,\n        \"can_see_public_alias\":true,\n        \"can_see_tags\":true,\n        \"can_see_transaction_amount\":true,\n        \"can_see_transaction_balance\":true,\n        \"can_see_transaction_currency\":true,\n        \"can_see_transaction_description\":true,\n        \"can_see_transaction_finish_date\":true,\n        \"can_see_transaction_metadata\":true,\n        \"can_see_transaction_other_bank_account\":true,\n        \"can_see_transaction_start_date\":true,\n        \"can_see_transaction_this_bank_account\":true,\n        \"can_see_transaction_type\":true,\n        \"can_see_url\":true,\n        \"can_see_where_tag\":true\n      }],\n      \"bank_id\":\"gh.uk.db\"\n    },\n    \"replacement\":{\n      \"requested_date\":\"2017-09-19T00:00:00Z\",\n      \"reason_requested\":\"RENEW\"\n    },\n    \"pin_reset\":[{\n      \"requested_date\":\"2017-09-19T00:00:00Z\",\n      \"reason_requested\":\"FORGOT\"\n    }],\n    \"collected\":\"2017-09-19T00:00:00Z\",\n    \"posted\":\"2017-09-19T00:00:00Z\"\n  }]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Transactions for Account (Core)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID/transactions",
+							"path": [
+								"banks",
+								":BANK_ID",
+								"accounts",
+								":ACCOUNT_ID",
+								"transactions"
+							],
+							"variable": [
+								{
+									"key": "BANK_ID",
+									"value": ""
+								},
+								{
+									"key": "ACCOUNT_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "af8b307c-86e2-4785-91bb-543f4d465f88",
+							"name": "Get Transactions for Account 5995d6a2-01b3-423c-a173-5481df49bdaf",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "/banks/:BANK_ID/accounts/:ACCOUNT_ID/transactions",
+									"path": [
+										"banks",
+										":BANK_ID",
+										"accounts",
+										":ACCOUNT_ID",
+										"transactions"
+									],
+									"variable": [
+										{
+											"key": "BANK_ID",
+											"value": "gh.29.uk"
+										},
+										{
+											"key": "ACCOUNT_ID",
+											"value": "5995d6a2-01b3-423c-a173-5481df49bdaf"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"transactions\":[{\n    \"id\":\"123\",\n    \"account\":{\n      \"id\":\"5995d6a2-01b3-423c-a173-5481df49bdaf\",\n      \"holders\":[{\n        \"name\":\"OBP\",\n        \"is_alias\":true\n      }],\n      \"number\":\"123\",\n      \"kind\":\"AC\",\n      \"IBAN\":\"UK1234AD\",\n      \"swift_bic\":\"UK1234AD\",\n      \"bank\":{\n        \"national_identifier\":\"OBP\",\n        \"name\":\"OBP\"\n      }\n    },\n    \"counterparty\":{\n      \"id\":\"123\",\n      \"holder\":{\n        \"name\":\"ZACK\"\n      },\n      \"number\":\"1234\",\n      \"kind\":\"AV\",\n      \"IBAN\":\"UK12344DB\",\n      \"swift_bic\":\"UK12344DB\",\n      \"bank\":{\n        \"national_identifier\":\"OBP\",\n        \"name\":\"OBP\"\n      }\n    },\n    \"details\":{\n      \"type\":\"AC\",\n      \"description\":\"OBP\",\n      \"posted\":\"2017-09-19T00:00:00Z\",\n      \"completed\":\"2017-09-19T00:00:00Z\",\n      \"new_balance\":{\n        \"currency\":\"EUR\",\n        \"amount\":\"10\"\n      },\n      \"value\":{\n        \"currency\":\"EUR\",\n        \"amount\":\"10\"\n      }\n    }\n  }]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction Metadata",
+			"description": "",
+			"item": [
+				{
+					"name": "Add a tag",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/banks/BANK_ID/accounts/:ACCOUNT_ID/:VIEW_ID/transactions/:TRANSACTION_ID/metadata/tags",
+							"path": [
+								"banks",
+								"BANK_ID",
+								"accounts",
+								":ACCOUNT_ID",
+								":VIEW_ID",
+								"transactions",
+								":TRANSACTION_ID",
+								"metadata",
+								"tags"
+							],
+							"variable": [
+								{
+									"key": "ACCOUNT_ID",
+									"value": ""
+								},
+								{
+									"key": "VIEW_ID",
+									"value": ""
+								},
+								{
+									"key": "TRANSACTION_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "147ffea3-6f7e-48fd-abfb-480cdc5146ec",
+							"name": "Add a tag for Tx 123 on Account 5995d6a2-01b3-423c-a173-5481df49bdaf",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"value\":\"Home\"}"
+								},
+								"url": {
+									"raw": "/banks/BANK_ID/accounts/:ACCOUNT_ID/:VIEW_ID/transactions/:TRANSACTION_ID/metadata/tags",
+									"path": [
+										"banks",
+										"BANK_ID",
+										"accounts",
+										":ACCOUNT_ID",
+										":VIEW_ID",
+										"transactions",
+										":TRANSACTION_ID",
+										"metadata",
+										"tags"
+									],
+									"variable": [
+										{
+											"key": "ACCOUNT_ID",
+											"value": "5995d6a2-01b3-423c-a173-5481df49bdaf"
+										},
+										{
+											"key": "VIEW_ID",
+											"value": "123"
+										},
+										{
+											"key": "TRANSACTION_ID",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"id\": \"456\",\n    \"value\": \"Home\",\n    \"date\": \"2017-09-19T00:00:00Z\",\n    \"user\": {\n        \"id\": \"5995d6a2-01b3-423c-a173-5481df49bdaf\",\n        \"provider\": \"OBP\",\n        \"display_name\": \"OBP\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/banks/BANK_ID/accounts/:ACCOUNT_ID/:VIEW_ID/transactions/:TRANSACTION_ID/metadata/tags",
+							"path": [
+								"banks",
+								"BANK_ID",
+								"accounts",
+								":ACCOUNT_ID",
+								":VIEW_ID",
+								"transactions",
+								":TRANSACTION_ID",
+								"metadata",
+								"tags"
+							],
+							"variable": [
+								{
+									"key": "ACCOUNT_ID",
+									"value": ""
+								},
+								{
+									"key": "VIEW_ID",
+									"value": ""
+								},
+								{
+									"key": "TRANSACTION_ID",
+									"value": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "3379fca3-2ca8-4910-a6c2-4933bd3cd31f",
+							"name": "Get tags",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "/banks/BANK_ID/accounts/:ACCOUNT_ID/:VIEW_ID/transactions/:TRANSACTION_ID/metadata/tags",
+									"path": [
+										"banks",
+										"BANK_ID",
+										"accounts",
+										":ACCOUNT_ID",
+										":VIEW_ID",
+										"transactions",
+										":TRANSACTION_ID",
+										"metadata",
+										"tags"
+									],
+									"variable": [
+										{
+											"key": "ACCOUNT_ID",
+											"value": "5995d6a2-01b3-423c-a173-5481df49bdaf"
+										},
+										{
+											"key": "VIEW_ID",
+											"value": "123"
+										},
+										{
+											"key": "TRANSACTION_ID",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[{\n    \"id\": \"456\",\n    \"value\": \"Home\",\n    \"date\": \"2017-09-19T00:00:00Z\",\n    \"user\": {\n        \"id\": \"5995d6a2-01b3-423c-a173-5481df49bdaf\",\n        \"provider\": \"OBP\",\n        \"display_name\": \"OBP\"\n    }\n}]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a34348e1-51c7-415c-b704-4fae5b873b2f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "24c9cc6a-dbac-4547-afe0-a641fa15db34",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
