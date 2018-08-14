@@ -1,0 +1,888 @@
+{
+	"info": {
+		"name": "Openbanking.co.uk Account and Transaction API",
+		"_postman_id": "640cc564-4645-4235-9cd4-02a423a4b506",
+		"description": "version=1.1.0 - Openbanking.co.uk for Account and Transaction API Specification as decribed on https://openbanking.atlassian.net/wiki/download/attachments/5785171/account-info-swagger.yaml?api=v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "account-requests",
+			"description": "Folder for account-requests",
+			"item": [
+				{
+					"name": "Create an account request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-jws-signature",
+								"value": "{{x-jws-signature}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "https:///open-banking/v1.1/account-requests",
+						"description": "Create an account request"
+					},
+					"response": []
+				},
+				{
+					"name": "Get an account request",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v1.1/account-requests/:AccountRequestId",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v1.1",
+								"account-requests",
+								":AccountRequestId"
+							],
+							"variable": [
+								{
+									"key": "AccountRequestId",
+									"value": "{{AccountRequestId}}"
+								}
+							]
+						},
+						"description": "Get an account request"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an account request",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v1.1/account-requests/:AccountRequestId",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v1.1",
+								"account-requests",
+								":AccountRequestId"
+							],
+							"variable": [
+								{
+									"key": "AccountRequestId",
+									"value": "{{AccountRequestId}}"
+								}
+							]
+						},
+						"description": "Delete an account request"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "accounts",
+			"description": "Folder for accounts",
+			"item": [
+				{
+					"name": "Get Accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": "https:///open-banking/v1.1/accounts",
+						"description": "Get a list of accounts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v1.1/accounts/:AccountId",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v1.1",
+								"accounts",
+								":AccountId"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						},
+						"description": "Get an account"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account Transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v1.1/accounts/:AccountId/transactions?fromBookingDateTime={{fromBookingDateTime}}&toBookingDateTime={{toBookingDateTime}}",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v1.1",
+								"accounts",
+								":AccountId",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "fromBookingDateTime",
+									"value": "{{fromBookingDateTime}}"
+								},
+								{
+									"key": "toBookingDateTime",
+									"value": "{{toBookingDateTime}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						},
+						"description": "Get transactions related to an account"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account Beneficiaries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v1.1/accounts/:AccountId/beneficiaries",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v1.1",
+								"accounts",
+								":AccountId",
+								"beneficiaries"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						},
+						"description": "Get Beneficiaries related to an account"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account Balances",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v1.1/accounts/:AccountId/balances",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v1.1",
+								"accounts",
+								":AccountId",
+								"balances"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						},
+						"description": "Get Balances related to an account"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account Direct Debits",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v1.1/accounts/:AccountId/direct-debits",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v1.1",
+								"accounts",
+								":AccountId",
+								"direct-debits"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						},
+						"description": "Get Direct Debits related to an account"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account Standing Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v1.1/accounts/:AccountId/standing-orders",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v1.1",
+								"accounts",
+								":AccountId",
+								"standing-orders"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						},
+						"description": "Get Standing Orders related to an account"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account Product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v1.1/accounts/:AccountId/product",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v1.1",
+								"accounts",
+								":AccountId",
+								"product"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						},
+						"description": "Get Product related to an account"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "standing-orders",
+			"description": "Folder for standing-orders",
+			"item": [
+				{
+					"name": "Get Standing Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": "https:///open-banking/v1.1/standing-orders",
+						"description": "Get Standing Orders"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "direct-debits",
+			"description": "Folder for direct-debits",
+			"item": [
+				{
+					"name": "Get Direct Debits",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": "https:///open-banking/v1.1/direct-debits",
+						"description": "Get Direct Debits"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "beneficiaries",
+			"description": "Folder for beneficiaries",
+			"item": [
+				{
+					"name": "Get Beneficiaries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": "https:///open-banking/v1.1/beneficiaries",
+						"description": "Get Beneficiaries"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"description": "Folder for transactions",
+			"item": [
+				{
+					"name": "Get Transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v1.1/transactions?fromBookingDateTime={{fromBookingDateTime}}&toBookingDateTime={{toBookingDateTime}}",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v1.1",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "fromBookingDateTime",
+									"value": "{{fromBookingDateTime}}"
+								},
+								{
+									"key": "toBookingDateTime",
+									"value": "{{toBookingDateTime}}"
+								}
+							]
+						},
+						"description": "Get Transactions"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "balances",
+			"description": "Folder for balances",
+			"item": [
+				{
+					"name": "Get Balances",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": "https:///open-banking/v1.1/balances",
+						"description": "Get Balances"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"description": "Folder for products",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							}
+						],
+						"body": {},
+						"url": "https:///open-banking/v1.1/products",
+						"description": "Get Products"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
