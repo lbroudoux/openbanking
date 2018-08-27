@@ -55,7 +55,75 @@
 						"url": "https:///open-banking/v1.1/account-requests",
 						"description": "Create an account request"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "bbaef02a-ef7d-4559-81dd-4af055c53123",
+							"name": "Simple creation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2YotnFZFEjr1zCsicMWpAA"
+									},
+									{
+										"key": "x-jws-signature",
+										"value": "TGlmZSdzIGEgam91cm5leSBub3QgYSBkZXN0aW5hdGlvbiA=..T2ggZ29vZCBldmVuaW5nIG1yIHR5bGVyIGdvaW5nIGRvd24gPw=="
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"Data\": {\n\t\t\"Permissions\": [\n\t\t\t\"ReadAccountsDetail\",\n    \t\t\"ReadBalances\",\n\t\t     \"ReadBeneficiariesDetail\",\n\t\t     \"ReadDirectDebits\",\n\t\t     \"ReadProducts\",\n\t\t     \"ReadStandingOrdersDetail\",\n\t\t     \"ReadTransactionsCredits\",\n\t\t     \"ReadTransactionsDebits\",\n\t\t     \"ReadTransactionsDetail\"\n    \t],\n    \t\"ExpirationDateTime\": \"2017-05-02T00:00:00+00:00\",\n    \t\"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n    \t\"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n\t},\n\t\"Risk\": {}\n}"
+								},
+								"url": "https:///open-banking/v1.1/account-requests"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-jws-signature",
+									"value": "V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K",
+									"description": "",
+									"type": "text",
+									"name": "x-jws-signature"
+								},
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text",
+									"name": "x-fapi-interaction-id"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Data\": {\n    \"AccountRequestId\": \"88379\",\n    \"Status\": \"AwaitingAuthorisation\",\n    \"CreationDateTime\": \"2017-05-02T00:00:00+00:00\",\n    \"Permissions\": [\n      \"ReadAccountsDetail\",\n      \"ReadBalances\",\n      \"ReadBeneficiariesDetail\",\n      \"ReadDirectDebits\",\n      \"ReadProducts\",\n      \"ReadStandingOrdersDetail\",\n      \"ReadTransactionsCredits\",\n      \"ReadTransactionsDebits\",\n      \"ReadTransactionsDetail\"\n    ],\n    \"ExpirationDateTime\": \"2017-08-02T00:00:00+00:00\",\n    \"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n    \"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n  },\n  \"Risk\": {},\n  \"Links\": {\n    \"Self\": \"/account-requests/88379\"\n  },\n  \"Meta\": {\n    \"TotalPages\": 1\n  }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get an account request",
@@ -111,7 +179,130 @@
 						},
 						"description": "Get an account request"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "abefdb96-232f-4d9c-821f-9587071a842c",
+							"name": "Get 88378 account request (after validation)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2YotnFZFEjr1zCsicMWpAA"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "https:///open-banking/v1.1/account-requests/:AccountRequestId",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v1.1",
+										"account-requests",
+										":AccountRequestId"
+									],
+									"variable": [
+										{
+											"key": "AccountRequestId",
+											"value": "88378"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"Data\": {\n        \"AccountRequestId\": \"88378\",\n        \"Status\": \"Authorised\",\n        \"CreationDateTime\": \"2017-05-02T00:00:00+00:00\",\n        \"Permissions\": [\n            \"ReadAccountsDetail\",\n            \"ReadBalances\",\n            \"ReadBeneficiariesDetail\",\n            \"ReadDirectDebits\",\n            \"ReadProducts\",\n            \"ReadStandingOrdersDetail\",\n            \"ReadTransactionsCredits\",\n            \"ReadTransactionsDebits\",\n            \"ReadTransactionsDetail\"\n        ],\n        \"ExpirationDateTime\": \"2017-08-02T00:00:00+00:00\",\n        \"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n        \"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n    },\n    \"Risk\": {},\n    \"Links\": {\n        \"Self\": \"/account-requests/88379\"\n    },\n    \"Meta\": {\n        \"TotalPages\": 1\n    }\n}"
+						},
+						{
+							"id": "7d3e4d9b-81c9-4013-97e3-db08708e6844",
+							"name": "Get 88379 account request (before validation)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2YotnFZFEjr1zCsicMWpAA"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "https:///open-banking/v1.1/account-requests/:AccountRequestId",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v1.1",
+										"account-requests",
+										":AccountRequestId"
+									],
+									"variable": [
+										{
+											"key": "AccountRequestId",
+											"value": "88379"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"Data\": {\n        \"AccountRequestId\": \"88379\",\n        \"Status\": \"AwaitingAuthorisation\",\n        \"CreationDateTime\": \"2017-05-02T00:00:00+00:00\",\n        \"Permissions\": [\n            \"ReadAccountsDetail\",\n            \"ReadBalances\",\n            \"ReadBeneficiariesDetail\",\n            \"ReadDirectDebits\",\n            \"ReadProducts\",\n            \"ReadStandingOrdersDetail\",\n            \"ReadTransactionsCredits\",\n            \"ReadTransactionsDebits\",\n            \"ReadTransactionsDetail\"\n        ],\n        \"ExpirationDateTime\": \"2017-08-02T00:00:00+00:00\",\n        \"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n        \"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n    },\n    \"Risk\": {},\n    \"Links\": {\n        \"Self\": \"/account-requests/88379\"\n    },\n    \"Meta\": {\n        \"TotalPages\": 1\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Delete an account request",
