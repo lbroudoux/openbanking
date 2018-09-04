@@ -57,7 +57,7 @@
 					},
 					"response": [
 						{
-							"id": "bbaef02a-ef7d-4559-81dd-4af055c53123",
+							"id": "6468b73f-36c6-4451-8c1d-f5afcc677d03",
 							"name": "Simple creation",
 							"originalRequest": {
 								"method": "POST",
@@ -181,7 +181,7 @@
 					},
 					"response": [
 						{
-							"id": "abefdb96-232f-4d9c-821f-9587071a842c",
+							"id": "115bed33-0b33-45f7-9d5a-b959c5bd799f",
 							"name": "Get 88378 account request (after validation)",
 							"originalRequest": {
 								"method": "GET",
@@ -242,7 +242,7 @@
 							"body": "{\n    \"Data\": {\n        \"AccountRequestId\": \"88378\",\n        \"Status\": \"Authorised\",\n        \"CreationDateTime\": \"2017-05-02T00:00:00+00:00\",\n        \"Permissions\": [\n            \"ReadAccountsDetail\",\n            \"ReadBalances\",\n            \"ReadBeneficiariesDetail\",\n            \"ReadDirectDebits\",\n            \"ReadProducts\",\n            \"ReadStandingOrdersDetail\",\n            \"ReadTransactionsCredits\",\n            \"ReadTransactionsDebits\",\n            \"ReadTransactionsDetail\"\n        ],\n        \"ExpirationDateTime\": \"2017-08-02T00:00:00+00:00\",\n        \"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n        \"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n    },\n    \"Risk\": {},\n    \"Links\": {\n        \"Self\": \"/account-requests/88379\"\n    },\n    \"Meta\": {\n        \"TotalPages\": 1\n    }\n}"
 						},
 						{
-							"id": "7d3e4d9b-81c9-4013-97e3-db08708e6844",
+							"id": "0f7b1080-5a87-4455-b0bd-f5df291e13c1",
 							"name": "Get 88379 account request (before validation)",
 							"originalRequest": {
 								"method": "GET",
@@ -388,7 +388,64 @@
 						"url": "https:///open-banking/v1.1/accounts",
 						"description": "Get a list of accounts"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "a8fc3462-9c58-4b9c-839c-6e1bab748db7",
+							"name": "Get bulk accounts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer Az90SAOJklae"
+									}
+								],
+								"body": {},
+								"url": "https:///open-banking/v1.1/accounts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-jws-signature",
+									"value": "V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K",
+									"description": "",
+									"type": "text",
+									"name": "x-jws-signature"
+								},
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text",
+									"name": "x-fapi-interaction-id"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Data\": {\n    \"Account\": [\n      {\n        \"AccountId\": \"22289\",\n        \"Currency\": \"GBP\",\n        \"Nickname\": \"Bills\",\n        \"Account\": {\n          \"SchemeName\": \"SortCodeAccountNumber\",\n          \"Identification\": \"80200110203345\",\n          \"Name\": \"Mr Kevin\",\n          \"SecondaryIdentification\": \"00021\"\n        }\n      },\n      {\n        \"AccountId\": \"31820\",\n        \"Currency\": \"GBP\",\n        \"Nickname\": \"Household\",\n        \"Account\": {\n          \"SchemeName\": \"SortCodeAccountNumber\",\n          \"Identification\": \"80200110203348\",\n          \"Name\": \"Mr Kevin\"\n        }\n      }\n    ]\n  },\n  \"Links\": {\n    \"Self\": \"/accounts/\"\n  },\n  \"Meta\": {\n    \"TotalPages\": 1\n  }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Account",
@@ -444,7 +501,145 @@
 						},
 						"description": "Get an account"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "8f6bf7bc-3b20-458f-b49d-ccace29c860c",
+							"name": "Get account 31820",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer Az90SAOJklae"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "https:///open-banking/v1.1/accounts/:AccountId",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v1.1",
+										"accounts",
+										":AccountId"
+									],
+									"variable": [
+										{
+											"key": "AccountId",
+											"value": "31820"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"Data\": {\n    \"Account\": [\n      {\n        \"AccountId\": \"31820\",\n        \"Currency\": \"GBP\",\n        \"Nickname\": \"Household\",\n        \"Account\": {\n            \"SchemeName\": \"SortCodeAccountNumber\",\n            \"Identification\": \"80200110203348\",\n            \"Name\": \"Mr Kevin\"\n        }\n      }\n    ]\n  },\n  \"Links\": {\n    \"Self\": \"/accounts/31820\"\n  },\n  \"Meta\": {\n    \"TotalPages\": 1\n  }\n}"
+						},
+						{
+							"id": "f4273650-60b5-4acf-9888-edd285a12fc3",
+							"name": "Get account 22289",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer Az90SAOJklae"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "https:///open-banking/v1.1/accounts/:AccountId",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v1.1",
+										"accounts",
+										":AccountId"
+									],
+									"variable": [
+										{
+											"key": "AccountId",
+											"value": "22289"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text",
+									"name": "x-fapi-interaction-id"
+								},
+								{
+									"key": "x-jws-signature",
+									"value": "V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K",
+									"description": "",
+									"type": "text",
+									"name": "x-jws-signature"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Data\": {\n    \"Account\": [\n      {\n        \"AccountId\": \"22289\",\n        \"Currency\": \"GBP\",\n        \"Nickname\": \"Bills\",\n        \"Account\": {\n          \"SchemeName\": \"SortCodeAccountNumber\",\n          \"Identification\": \"80200110203345\",\n          \"Name\": \"Mr Kevin\",\n          \"SecondaryIdentification\": \"00021\"\n        }\n      }\n    ]\n  },\n  \"Links\": {\n    \"Self\": \"/accounts/22289\"\n  },\n  \"Meta\": {\n    \"TotalPages\": 1\n  }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Account Transactions",
@@ -568,7 +763,162 @@
 						},
 						"description": "Get Beneficiaries related to an account"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "c54bfa4d-fec8-4922-ac54-b853153c6db4",
+							"name": "Get account 31820 beneficiaries",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer Az90SAOJklae"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "https:///open-banking/v1.1/accounts/:AccountId/beneficiaries",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v1.1",
+										"accounts",
+										":AccountId",
+										"beneficiaries"
+									],
+									"variable": [
+										{
+											"key": "AccountId",
+											"value": "31820"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-jws-signature",
+									"value": "V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K",
+									"description": "",
+									"type": "text",
+									"name": "x-jws-signature"
+								},
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text",
+									"name": "x-fapi-interaction-id"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Data\": {\n        \"Beneficiary\": [\n            {\n        \"AccountId\": \"31820\",\n        \"BeneficiaryId\": \"Ben37\",\n        \"Reference\": \"Golf Club\",\n        \"CreditorAccount\": {\n          \"SchemeName\": \"SortCodeAccountNumber\",\n          \"Identification\": \"87562298675421\",\n          \"Name\": \"Mr Large\"\n        }\n      }\n        ]\n    },\n    \"Links\": {\n        \"Self\": \"/accounts/31820/beneficiaries/\"\n    },\n    \"Meta\": {\n        \"TotalPages\": 1\n    }\n}"
+						},
+						{
+							"id": "0d9a280e-a53c-4b86-ba64-6ce500f20d08",
+							"name": "Get account 22289 beneficiaries",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer Az90SAOJklae"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "https:///open-banking/v1.1/accounts/:AccountId/beneficiaries",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v1.1",
+										"accounts",
+										":AccountId",
+										"beneficiaries"
+									],
+									"variable": [
+										{
+											"key": "AccountId",
+											"value": "22289"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-jws-signature",
+									"value": "V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K",
+									"description": "",
+									"type": "text",
+									"name": "x-jws-signature"
+								},
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text",
+									"name": "x-fapi-interaction-id"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Data\": {\n    \"Beneficiary\": [\n      {\n        \"AccountId\": \"22289\",\n        \"BeneficiaryId\": \"Ben1\",\n        \"Reference\": \"Towbar Club\",\n        \"CreditorAccount\": {\n          \"SchemeName\": \"SortCodeAccountNumber\",\n          \"Identification\": \"80200112345678\",\n          \"Name\": \"Mrs Juniper\"\n        }\n      }\n    ]\n  },\n  \"Links\": {\n    \"Self\": \"/accounts/22289/beneficiaries/\"\n  },\n  \"Meta\": {\n    \"TotalPages\": 1\n  }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Account Balances",
@@ -625,7 +975,162 @@
 						},
 						"description": "Get Balances related to an account"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "a6977bf2-b571-41e7-bf6d-d1441df9cfec",
+							"name": "Get account 22289 balances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer Az90SAOJklae"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "https:///open-banking/v1.1/accounts/:AccountId/balances",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v1.1",
+										"accounts",
+										":AccountId",
+										"balances"
+									],
+									"variable": [
+										{
+											"key": "AccountId",
+											"value": "22289"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-jws-signature",
+									"value": "V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K",
+									"description": "",
+									"type": "text",
+									"name": "x-jws-signature"
+								},
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text",
+									"name": "x-fapi-interaction-id"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Data\": {\n    \"Balance\": [\n      {\n        \"AccountId\": \"22289\",\n        \"Amount\": {\n          \"Amount\": \"1230.00\",\n          \"Currency\": \"GBP\"\n        },\n        \"CreditDebitIndicator\": \"Credit\",\n        \"Type\": \"InterimAvailable\",\n        \"DateTime\": \"2017-04-05T10:43:07+00:00\",\n        \"CreditLine\": [\n          {\n            \"Included\": true,\n            \"Amount\": {\n              \"Amount\": \"1000.00\",\n              \"Currency\": \"GBP\"\n            },\n            \"Type\": \"Pre-Agreed\"\n          }\n        ]\n      }\n    ]\n  },\n  \"Links\": {\n    \"Self\": \"/accounts/22289/balances/\"\n  },\n  \"Meta\": {\n    \"TotalPages\": 1\n  }\n}"
+						},
+						{
+							"id": "4f77a851-90ec-4ce2-8054-9b86f26792d6",
+							"name": "Get account 31820 balances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer Az90SAOJklae"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "https:///open-banking/v1.1/accounts/:AccountId/balances",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v1.1",
+										"accounts",
+										":AccountId",
+										"balances"
+									],
+									"variable": [
+										{
+											"key": "AccountId",
+											"value": "31820"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "x-jws-signature",
+									"value": "V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K",
+									"description": "",
+									"type": "text",
+									"name": "x-jws-signature"
+								},
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text",
+									"name": "x-fapi-interaction-id"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Data\": {\n        \"Balance\": [\n            {\n                \"AccountId\": \"31820\",\n                \"Amount\": {\n                    \"Amount\": \"57.36\",\n                    \"Currency\": \"GBP\"\n                },\n                \"CreditDebitIndicator\": \"Credit\",\n                \"Type\": \"InterimAvailable\",\n                \"DateTime\": \"2017-05-29T10:43:07+00:00\",\n                \"CreditLine\": [\n                    {\n                        \"Included\": true,\n                        \"Amount\": {\n                            \"Amount\": \"500.00\",\n                            \"Currency\": \"GBP\"\n                        },\n                        \"Type\": \"Pre-Agreed\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"Links\": {\n        \"Self\": \"/accounts/31820/balances/\"\n    },\n    \"Meta\": {\n        \"TotalPages\": 1\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Account Direct Debits",
@@ -922,7 +1427,64 @@
 						"url": "https:///open-banking/v1.1/beneficiaries",
 						"description": "Get Beneficiaries"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "6a83b9fa-eca6-4903-852b-34b1843011e6",
+							"name": "Get bulk beneficiaries",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer Az90SAOJklae"
+									}
+								],
+								"body": {},
+								"url": "https:///open-banking/v1.1/beneficiaries"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-jws-signature",
+									"value": "V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K",
+									"description": "",
+									"type": "text",
+									"name": "x-jws-signature"
+								},
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text",
+									"name": "x-fapi-interaction-id"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Data\": {\n    \"Beneficiary\": [\n      {\n        \"AccountId\": \"22289\",\n        \"BeneficiaryId\": \"Ben1\",\n        \"Reference\": \"Towbar Club\",\n        \"CreditorAccount\": {\n          \"SchemeName\": \"SortCodeAccountNumber\",\n          \"Identification\": \"80200112345678\",\n          \"Name\": \"Mrs Juniper\"\n        }\n      },\n      {\n        \"AccountId\": \"31820\",\n        \"BeneficiaryId\": \"Ben37\",\n        \"Reference\": \"Golf Club\",\n        \"CreditorAccount\": {\n          \"SchemeName\": \"SortCodeAccountNumber\",\n          \"Identification\": \"87562298675421\",\n          \"Name\": \"Mr Large\"\n        }\n      }\n    ]\n  },\n  \"Links\": {\n    \"Self\": \"/beneficiaries/\"\n  },\n  \"Meta\": {\n    \"TotalPages\": 1\n  }\n}"
+						}
+					]
 				}
 			]
 		},
@@ -1029,7 +1591,64 @@
 						"url": "https:///open-banking/v1.1/balances",
 						"description": "Get Balances"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "d45f8c5a-fff5-4326-be1f-25a11f7e67c7",
+							"name": "Get bulk balances",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 UTC"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer Az90SAOJklae"
+									}
+								],
+								"body": {},
+								"url": "https:///open-banking/v1.1/balances"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-jws-signature",
+									"value": "V2hhdCB3ZSBnb3QgaGVyZQ0K..aXMgZmFpbHVyZSB0byBjb21tdW5pY2F0ZQ0K",
+									"description": "",
+									"type": "text",
+									"name": "x-jws-signature"
+								},
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text",
+									"name": "x-fapi-interaction-id"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Data\": {\n    \"Balance\": [\n      {\n        \"AccountId\": \"22289\",\n        \"Amount\": {\n          \"Amount\": \"1230.00\",\n          \"Currency\": \"GBP\"\n        },\n        \"CreditDebitIndicator\": \"Credit\",\n        \"Type\": \"InterimAvailable\",\n        \"DateTime\": \"2017-04-05T10:43:07+00:00\",\n        \"CreditLine\": [\n          {\n            \"Included\": true,\n            \"Amount\": {\n              \"Amount\": \"1000.00\",\n              \"Currency\": \"GBP\"\n            },\n            \"Type\": \"Pre-Agreed\"\n          }\n        ]\n      },\n      {\n        \"AccountId\": \"31820\",\n        \"Amount\": {\n          \"Amount\": \"57.36\",\n          \"Currency\": \"GBP\"\n        },\n        \"CreditDebitIndicator\": \"Debit\",\n        \"Type\": \"InterimBooked\",\n        \"DateTime\": \"2017-05-02T14:22:09+00:00\"\n      }\n    ]\n  },\n  \"Links\": {\n    \"Self\": \"/balances/\"\n  },\n  \"Meta\": {\n    \"TotalPages\": 1\n  }\n}"
+						}
+					]
 				}
 			]
 		},
