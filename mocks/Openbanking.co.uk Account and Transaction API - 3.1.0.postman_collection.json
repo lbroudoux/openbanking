@@ -1,0 +1,2417 @@
+{
+	"info": {
+		"_postman_id": "92e8f1bc-a7b8-4deb-837a-6f8194fc7898",
+		"name": "Openbanking.co.uk Account and Transaction API v3.1.0",
+		"description": "version=3.1.0 - Openbanking.co.uk for Account and Transaction API Specification as decribed on https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/v3.1.0/dist/account-info-swagger.yaml",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "account-access-consents",
+			"item": [
+				{
+					"name": "Create Account Access Consents",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Default"
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/account-access-consents",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"account-access-consents"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Setup Account Access Consents - All Permission Granted",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 GMT"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2YotnFZFEjr1zCsicMWpAA"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Data\": {\n    \"Permissions\": [\n      \"ReadAccountsDetail\",\n      \"ReadBalances\",\n      \"ReadBeneficiariesDetail\",\n      \"ReadDirectDebits\",\n      \"ReadProducts\",\n      \"ReadStandingOrdersDetail\",\n      \"ReadTransactionsCredits\",\n      \"ReadTransactionsDebits\",\n      \"ReadTransactionsDetail\",\n      \"ReadOffers\",\n      \"ReadPAN\",\n      \"ReadParty\",\n      \"ReadPartyPSU\",\n      \"ReadScheduledPaymentsDetail\",\n      \"ReadStatementsDetail\"\n    ],\n    \"ExpirationDateTime\": \"2017-05-02T00:00:00+00:00\",\n    \"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n    \"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n  },\n  \"Risk\": {}\n}"
+								},
+								"url": {
+									"raw": "https:///open-banking/v3.1/aisp/account-access-consents",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v3.1",
+										"aisp",
+										"account-access-consents"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-fapi-interation-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Data\": {\n    \"ConsentId\": \"urn-alphabank-intent-88379\",\n    \"Status\": \"AwaitingAuthorisation\",\n    \"StatusUpdateDateTime\": \"2017-05-02T00:00:00+00:00\",\n    \"CreationDateTime\": \"2017-05-02T00:00:00+00:00\",\n    \"Permissions\": [\n      \"ReadAccountsDetail\",\n      \"ReadBalances\",\n      \"ReadBeneficiariesDetail\",\n      \"ReadDirectDebits\",\n      \"ReadProducts\",\n      \"ReadStandingOrdersDetail\",\n      \"ReadTransactionsCredits\",\n      \"ReadTransactionsDebits\",\n      \"ReadTransactionsDetail\",\n      \"ReadOffers\",\n      \"ReadPAN\",\n      \"ReadParty\",\n      \"ReadPartyPSU\",\n      \"ReadScheduledPaymentsDetail\",\n      \"ReadStatementsDetail\"\n    ],\n    \"ExpirationDateTime\": \"2017-08-02T00:00:00+00:00\",\n    \"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n    \"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n \n  },\n  \"Risk\": {},\n  \"Links\": {\n    \"Self\": \"https://api.alphabank.com/open-banking/v3.1/aisp/account-access-consents/urn-alphabank-intent-88379\"\n  },\n  \"Meta\": {\n    \"TotalPages\": 1\n  }\n}"
+						},
+						{
+							"name": "Setup Account Access Consents - Limited Permissions",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 GMT",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2YotnFZFEjr1zCsicMWpAA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Data\": {\n        \"Permissions\": [\n            \"ReadAccountsBasic\",\n            \"ReadBalances\"\n        ],\n        \"ExpirationDateTime\": \"2017-05-02T00:00:00+00:00\",\n        \"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n        \"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n    },\n    \"Risk\": {}\n}"
+								},
+								"url": {
+									"raw": "https:///open-banking/v3.1/aisp/account-access-consents",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v3.1",
+										"aisp",
+										"account-access-consents"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"Data\": {\n    \"ConsentId\": \"urn-alphabank-intent-88379\",\n    \"Status\": \"AwaitingAuthorisation\",\n    \"StatusUpdateDateTime\": \"2017-05-02T00:00:00+00:00\",\n    \"CreationDateTime\": \"2017-05-02T00:00:00+00:00\",\n    \"Permissions\": [\n      \"ReadAccountsBasic\",\n      \"ReadBalances\"\n    ],\n    \"ExpirationDateTime\": \"2017-08-02T00:00:00+00:00\",\n    \"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n    \"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n  },\n  \"Risk\": {},\n  \"Links\": {\n    \"Self\": \"https://api.alphabank.com/open-banking/v3.1/aisp/account-access-consents/urn-alphabank-intent-88379\"\n  },\n  \"Meta\": {\n    \"TotalPages\": 1\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Account Access Consents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/account-access-consents/:ConsentId",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"account-access-consents",
+								":ConsentId"
+							],
+							"variable": [
+								{
+									"key": "ConsentId",
+									"value": "{{ConsentId}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Account Access Consents - Awaiting Authorization",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 GMT",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2YotnFZFEjr1zCsicMWpAA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https:///open-banking/v3.1/aisp/account-access-consents/:ConsentId",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v3.1",
+										"aisp",
+										"account-access-consents",
+										":ConsentId"
+									],
+									"variable": [
+										{
+											"key": "ConsentId",
+											"value": "urn-alphabank-intent-88380"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Data\": {\n        \"ConsentId\": \"urn-alphabank-intent-88380\",\n        \"Status\": \"AwaitingAuthorisation\",\n        \"StatusUpdateDateTime\": \"2017-05-02T00:00:00+00:00\",\n        \"CreationDateTime\": \"2017-05-02T00:00:00+00:00\",\n        \"Permissions\": [\n            \"ReadAccountsDetail\",\n            \"ReadBalances\",\n            \"ReadBeneficiariesDetail\",\n            \"ReadDirectDebits\",\n            \"ReadProducts\",\n            \"ReadStandingOrdersDetail\",\n            \"ReadTransactionsCredits\",\n            \"ReadTransactionsDebits\",\n            \"ReadTransactionsDetail\",\n            \"ReadOffers\",\n            \"ReadPAN\",\n            \"ReadParty\",\n            \"ReadPartyPSU\",\n            \"ReadScheduledPaymentsDetail\",\n            \"ReadStatementsDetail\"\n        ],\n        \"ExpirationDateTime\": \"2017-08-02T00:00:00+00:00\",\n        \"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n        \"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n    },\n    \"Risk\": {},\n    \"Links\": {\n        \"Self\": \"https://api.alphabank.com/open-banking/v3.1/aisp/account-access-consents/urn-alphabank-intent-88379\"\n    },\n    \"Meta\": {\n        \"TotalPages\": 1\n    }\n}"
+						},
+						{
+							"name": "Get Account Access Consents - Authorised",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 GMT",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2YotnFZFEjr1zCsicMWpAA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https:///open-banking/v3.1/aisp/account-access-consents/:ConsentId",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v3.1",
+										"aisp",
+										"account-access-consents",
+										":ConsentId"
+									],
+									"variable": [
+										{
+											"key": "ConsentId",
+											"value": "urn-alphabank-intent-88379"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Data\": {\n        \"ConsentId\": \"urn-alphabank-intent-88379\",\n        \"Status\": \"Authorised\",\n        \"StatusUpdateDateTime\": \"2017-05-02T00:05:00+00:00\",\n        \"CreationDateTime\": \"2017-05-02T00:00:00+00:00\",\n        \"Permissions\": [\n            \"ReadAccountsDetail\",\n            \"ReadBalances\",\n            \"ReadBeneficiariesDetail\",\n            \"ReadDirectDebits\",\n            \"ReadProducts\",\n            \"ReadStandingOrdersDetail\",\n            \"ReadTransactionsCredits\",\n            \"ReadTransactionsDebits\",\n            \"ReadTransactionsDetail\",\n            \"ReadOffers\",\n            \"ReadPAN\",\n            \"ReadParty\",\n            \"ReadPartyPSU\",\n            \"ReadScheduledPaymentsDetail\",\n            \"ReadStatementsDetail\"\n        ],\n        \"ExpirationDateTime\": \"2017-08-02T00:00:00+00:00\",\n        \"TransactionFromDateTime\": \"2017-05-03T00:00:00+00:00\",\n        \"TransactionToDateTime\": \"2017-12-03T00:00:00+00:00\"\n    },\n    \"Risk\": {},\n    \"Links\": {\n        \"Self\": \"https://api.alphabank.com/open-banking/v3.1/aisp/account-access-consents/urn-alphabank-intent-88379\"\n    },\n    \"Meta\": {\n        \"TotalPages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Account Access Consents",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/account-access-consents/:ConsentId",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"account-access-consents",
+								":ConsentId"
+							],
+							"variable": [
+								{
+									"key": "ConsentId",
+									"value": "{{ConsentId}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Account Access Consents",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 GMT",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99",
+										"type": "text"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 2YotnFZFEjr1zCsicMWpAA",
+										"type": "text"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "https:///open-banking/v3.1/aisp/account-access-consents/:ConsentId",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v3.1",
+										"aisp",
+										"account-access-consents",
+										":ConsentId"
+									],
+									"variable": [
+										{
+											"key": "ConsentId",
+											"value": "urn-alphabank-intent-88379"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "Folder for account-access-consents"
+		},
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "Get Accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get bulk accounts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "x-fapi-financial-id",
+										"value": "OB/2017/001"
+									},
+									{
+										"key": "x-fapi-customer-last-logged-time",
+										"value": "Sun, 10 Sep 2017 19:43:31 GMT"
+									},
+									{
+										"key": "x-fapi-customer-ip-address",
+										"value": "104.25.212.99"
+									},
+									{
+										"key": "x-fapi-interaction-id",
+										"value": "93bac548-d2de-4546-b106-880a5018460d"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer Az90SAOJklae"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https:///open-banking/v3.1/aisp/accounts",
+									"host": [
+										"https:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"open-banking",
+										"v3.1",
+										"aisp",
+										"accounts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-fapi-interaction-id",
+									"value": "93bac548-d2de-4546-b106-880a5018460d",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Data\": {\n        \"Account\": [\n            {\n                \"AccountId\": \"22289\",\n                \"Currency\": \"GBP\",\n                \"AccountType\": \"Personal\",\n                \"AccountSubType\": \"CurrentAccount\",\n                \"Nickname\": \"Bills\",\n                \"Account\": {\n                    \"SchemeName\": \"UK.OBIE.SortCodeAccountNumber\",\n                    \"Identification\": \"80200110203345\",\n                    \"Name\": \"Mr Kevin\",\n                    \"SecondaryIdentification\": \"00021\"\n                }\n            },\n            {\n                \"AccountId\": \"31820\",\n                \"Currency\": \"GBP\",\n                \"AccountType\": \"Personal\",\n                \"AccountSubType\": \"CurrentAccount\",\n                \"Nickname\": \"Household\",\n                \"Account\": {\n                    \"SchemeName\": \"UK.OBIE.SortCodeAccountNumber\",\n                    \"Identification\": \"80200110203348\",\n                    \"Name\": \"Mr Kevin\"\n                }\n            }\n        ]\n    },\n    \"Links\": {\n        \"Self\": \"https://api.alphabank.com/open-banking/v3.1/aisp/accounts/\"\n    },\n    \"Meta\": {\n        \"TotalPages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Balances",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/balances",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"balances"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Beneficiaries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/beneficiaries",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"beneficiaries"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Direct Debits",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/direct-debits",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"direct-debits"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Offers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/offers",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"offers"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Party",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/party",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"party"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/product",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"product"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Scheduled Payments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/scheduled-payments",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"scheduled-payments"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Standing Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/standing-orders",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"standing-orders"
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Statements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/statements?fromStatementDateTime={{fromStatementDateTime}}&toStatementDateTime={{toStatementDateTime}}",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"statements"
+							],
+							"query": [
+								{
+									"key": "fromStatementDateTime",
+									"value": "{{fromStatementDateTime}}"
+								},
+								{
+									"key": "toStatementDateTime",
+									"value": "{{toStatementDateTime}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Statements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/statements/:StatementId",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"statements",
+								":StatementId"
+							],
+							"variable": [
+								{
+									"key": "StatementId",
+									"value": "{{StatementId}}"
+								},
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Statements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/statements/:StatementId/file",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"statements",
+								":StatementId",
+								"file"
+							],
+							"variable": [
+								{
+									"key": "StatementId",
+									"value": "{{StatementId}}"
+								},
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/statements/:StatementId/transactions",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"statements",
+								":StatementId",
+								"transactions"
+							],
+							"variable": [
+								{
+									"key": "StatementId",
+									"value": "{{StatementId}}"
+								},
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/accounts/:AccountId/transactions?fromBookingDateTime={{fromBookingDateTime}}&toBookingDateTime={{toBookingDateTime}}",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"accounts",
+								":AccountId",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "fromBookingDateTime",
+									"value": "{{fromBookingDateTime}}"
+								},
+								{
+									"key": "toBookingDateTime",
+									"value": "{{toBookingDateTime}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "AccountId",
+									"value": "{{AccountId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for accounts"
+		},
+		{
+			"name": "balances",
+			"item": [
+				{
+					"name": "Get Balances",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/balances",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"balances"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for balances"
+		},
+		{
+			"name": "beneficiaries",
+			"item": [
+				{
+					"name": "Get Beneficiaries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/beneficiaries",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"beneficiaries"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for beneficiaries"
+		},
+		{
+			"name": "direct-debits",
+			"item": [
+				{
+					"name": "Get Direct Debits",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/direct-debits",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"direct-debits"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for direct-debits"
+		},
+		{
+			"name": "offers",
+			"item": [
+				{
+					"name": "Get Offers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/offers",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"offers"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for offers"
+		},
+		{
+			"name": "party",
+			"item": [
+				{
+					"name": "Get Party",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/party",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"party"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for party"
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/products",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for products"
+		},
+		{
+			"name": "scheduled-payments",
+			"item": [
+				{
+					"name": "Get Scheduled Payments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/scheduled-payments",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"scheduled-payments"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for scheduled-payments"
+		},
+		{
+			"name": "standing-orders",
+			"item": [
+				{
+					"name": "Get Standing Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/standing-orders",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"standing-orders"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for standing-orders"
+		},
+		{
+			"name": "statements",
+			"item": [
+				{
+					"name": "Get Statements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/statements?fromStatementDateTime={{fromStatementDateTime}}&toStatementDateTime={{toStatementDateTime}}",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"statements"
+							],
+							"query": [
+								{
+									"key": "fromStatementDateTime",
+									"value": "{{fromStatementDateTime}}"
+								},
+								{
+									"key": "toStatementDateTime",
+									"value": "{{toStatementDateTime}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for statements"
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "Get Transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "x-fapi-financial-id",
+								"value": "{{x-fapi-financial-id}}"
+							},
+							{
+								"key": "x-fapi-customer-last-logged-time",
+								"value": "{{x-fapi-customer-last-logged-time}}"
+							},
+							{
+								"key": "x-fapi-customer-ip-address",
+								"value": "{{x-fapi-customer-ip-address}}"
+							},
+							{
+								"key": "x-fapi-interaction-id",
+								"value": "{{x-fapi-interaction-id}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}"
+							},
+							{
+								"key": "x-customer-user-agent",
+								"value": "{{x-customer-user-agent}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https:///open-banking/v3.1/aisp/transactions?fromBookingDateTime={{fromBookingDateTime}}&toBookingDateTime={{toBookingDateTime}}",
+							"host": [
+								"https:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"open-banking",
+								"v3.1",
+								"aisp",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "fromBookingDateTime",
+									"value": "{{fromBookingDateTime}}"
+								},
+								{
+									"key": "toBookingDateTime",
+									"value": "{{toBookingDateTime}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for transactions"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "9f68ef70-ead9-42e7-8e5a-f498c930ab0a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "58aa14e1-b90c-4b2a-b8c1-3219b703d75a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
